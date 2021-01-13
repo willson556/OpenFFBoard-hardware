@@ -1,0 +1,24 @@
+{
+    "Header": {
+        "Comment": "All values are metric (mm)",
+        "CreationDate": "2021-01-13T06:06:02Z",
+        "GenerationSoftware": {
+            "Application": "EAGLE",
+            "Vendor": "Autodesk",
+            "Version": "9.6.2"
+        },
+        "Part": "Single"
+    },
+    "Overall": {
+        "BoardThickness": 1.57,
+        "LayerNumber": 2,
+        "Name": {
+            "ProjectId": "G27InterfaceBoard"
+        },
+        "Owner": "Thomas Willson <thomas.willson@me.com>",
+        "Size": {
+            "X": 60,
+            "Y": 60
+        }
+    }
+}
