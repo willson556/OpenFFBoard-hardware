@@ -51,3 +51,6 @@ eagle.epf
 *.lck
 
 .DS_Store
+
+# OpenOffice
+.~*
