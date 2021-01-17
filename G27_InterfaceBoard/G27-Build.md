@@ -32,6 +32,11 @@ Total Cost with all SMT assembly done by supplier: [Placeholder]
 - Fine Solder (ex: 63/37 0.38mm diameter with no-clean flux core)
 - Crimper for 0.1" Housing Pins (ex: [Crimping Tool: 0.1-1.0 mm² Capacity, 16-28 AWG](https://www.pololu.com/product/1928))
 - 3D Printer for G27 Wheel Mount
+- Basic Wrench Set
+- Basic Allen Wrench Set
+- Drill w/ Drill Bits
+- Hammer
+- Wood Saw
 
 ### Extra Tools for DIY SMT Assembly
 
