@@ -10769,6 +10769,11 @@ Likely a JST-PH connector on wheel</text>
 <pinref part="R13" gate="G$1" pin="2"/>
 <label x="114.3" y="22.86" size="1.27" layer="95" xref="yes"/>
 </segment>
+<segment>
+<pinref part="WHEEL" gate="JP1" pin="7"/>
+<wire x1="27.94" y1="40.64" x2="33.02" y2="40.64" width="0.1524" layer="91"/>
+<label x="33.02" y="40.64" size="1.27" layer="95" xref="yes"/>
+</segment>
 </net>
 <net name="MISO" class="0">
 <segment>
@@ -11134,13 +11139,6 @@ Likely a JST-PH connector on wheel</text>
 <pinref part="IC2" gate="A" pin="I"/>
 <wire x1="91.44" y1="160.02" x2="86.36" y2="160.02" width="0.1524" layer="91"/>
 <label x="86.36" y="160.02" size="1.27" layer="95" rot="R180" xref="yes"/>
-</segment>
-</net>
-<net name="SCLK" class="0">
-<segment>
-<pinref part="WHEEL" gate="JP1" pin="7"/>
-<wire x1="27.94" y1="40.64" x2="33.02" y2="40.64" width="0.1524" layer="91"/>
-<label x="33.02" y="40.64" size="1.27" layer="95" xref="yes"/>
 </segment>
 </net>
 <net name="N$9" class="0">
