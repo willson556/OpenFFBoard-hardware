@@ -169,7 +169,7 @@
 <wire x1="60" y1="-5" x2="60" y2="-55" width="0" layer="20"/>
 <wire x1="60" y1="-55" x2="55" y2="-60" width="0" layer="20" curve="-90"/>
 <text x="28" y="-27" size="1.778" layer="25">G27 Interface Board
-v1.0</text>
+v1.1</text>
 <text x="39" y="-14" size="1.778" layer="25">Shifter</text>
 <text x="38" y="-47" size="1.778" layer="25">Pedals</text>
 <text x="5" y="-51" size="1.778" layer="25">Wheel</text>
