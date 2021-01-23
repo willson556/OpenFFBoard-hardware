@@ -10524,6 +10524,7 @@ Source: http://www.nxp.com/documents/data_sheet/74ABT125.pdf</description>
 <part name="D6" library="diode" library_urn="urn:adsk.eagle:library:210" deviceset="BAT54" device="" package3d_urn="urn:adsk.eagle:package:43389/2"/>
 <part name="D7" library="diode" library_urn="urn:adsk.eagle:library:210" deviceset="BAT54" device="" package3d_urn="urn:adsk.eagle:package:43389/2"/>
 <part name="R11" library="resistor" library_urn="urn:adsk.eagle:library:348" deviceset="R-EU_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="5k"/>
+<part name="GND14" library="stm_board_f407" deviceset="SUPPLY1_GND" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -10794,6 +10795,7 @@ Source: http://www.nxp.com/documents/data_sheet/74ABT125.pdf</description>
 <attribute name="NAME" x="72.39" y="47.2186" size="1.778" layer="95"/>
 <attribute name="VALUE" x="72.39" y="42.418" size="1.778" layer="96"/>
 </instance>
+<instance part="GND14" gate="1" x="22.86" y="91.44" smashed="yes"/>
 </instances>
 <busses>
 </busses>
@@ -10964,6 +10966,11 @@ Source: http://www.nxp.com/documents/data_sheet/74ABT125.pdf</description>
 <pinref part="JP3" gate="A" pin="3"/>
 <wire x1="25.4" y1="20.32" x2="20.32" y2="20.32" width="0.1524" layer="91"/>
 <label x="20.32" y="20.32" size="1.27" layer="95" rot="R180" xref="yes"/>
+</segment>
+<segment>
+<pinref part="J2" gate="G$1" pin="5"/>
+<wire x1="25.4" y1="93.98" x2="22.86" y2="93.98" width="0.1524" layer="91"/>
+<pinref part="GND14" gate="1" pin="GND"/>
 </segment>
 </net>
 <net name="SCK" class="0">
@@ -11301,13 +11308,6 @@ Source: http://www.nxp.com/documents/data_sheet/74ABT125.pdf</description>
 <pinref part="JP3" gate="A" pin="9"/>
 <wire x1="25.4" y1="12.7" x2="20.32" y2="12.7" width="0.1524" layer="91"/>
 <label x="20.32" y="12.7" size="1.27" layer="95" rot="R180" xref="yes"/>
-</segment>
-</net>
-<net name="!SHIFT_PWR_LED" class="0">
-<segment>
-<pinref part="J2" gate="G$1" pin="5"/>
-<wire x1="25.4" y1="93.98" x2="22.86" y2="93.98" width="0.1524" layer="91"/>
-<label x="22.86" y="93.98" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="VCC" class="0">
