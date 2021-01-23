@@ -10473,6 +10473,9 @@ Source: http://www.nxp.com/documents/data_sheet/74ABT125.pdf</description>
 <part name="R13" library="resistor" library_urn="urn:adsk.eagle:library:348" deviceset="R-EU_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="51"/>
 <part name="R15" library="resistor" library_urn="urn:adsk.eagle:library:348" deviceset="R-EU_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="51"/>
 <part name="IC3" library="74xx-eu" deviceset="74*126" device="PW" package3d_urn="urn:adsk.eagle:package:2019/3" technology="AHCT"/>
+<part name="C7" library="resistor" library_urn="urn:adsk.eagle:library:348" deviceset="C-EU" device="C0603" package3d_urn="urn:adsk.eagle:package:23616/2" value="0.1uF"/>
+<part name="C8" library="resistor" library_urn="urn:adsk.eagle:library:348" deviceset="C-EU" device="C0603" package3d_urn="urn:adsk.eagle:package:23616/2" value="0.1uF"/>
+<part name="GND13" library="stm_board_f407" deviceset="SUPPLY1_GND" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -10704,6 +10707,17 @@ Source: http://www.nxp.com/documents/data_sheet/74ABT125.pdf</description>
 <attribute name="NAME" x="88.9" y="102.235" size="1.778" layer="95"/>
 <attribute name="VALUE" x="88.9" y="93.98" size="1.778" layer="96"/>
 </instance>
+<instance part="C7" gate="G$1" x="114.3" y="147.32" smashed="yes">
+<attribute name="NAME" x="115.824" y="147.701" size="1.778" layer="95"/>
+<attribute name="VALUE" x="115.824" y="142.621" size="1.778" layer="96"/>
+</instance>
+<instance part="C8" gate="G$1" x="124.46" y="147.32" smashed="yes">
+<attribute name="NAME" x="125.984" y="147.701" size="1.778" layer="95"/>
+<attribute name="VALUE" x="125.984" y="142.621" size="1.778" layer="96"/>
+</instance>
+<instance part="GND13" gate="1" x="119.38" y="134.62" smashed="yes">
+<attribute name="VALUE" x="116.84" y="132.08" size="1.778" layer="96"/>
+</instance>
 </instances>
 <busses>
 </busses>
@@ -10853,6 +10867,17 @@ Source: http://www.nxp.com/documents/data_sheet/74ABT125.pdf</description>
 <pinref part="SPI2" gate="A" pin="1"/>
 <wire x1="10.16" y1="35.56" x2="17.78" y2="35.56" width="0.1524" layer="91"/>
 <label x="17.78" y="35.56" size="1.27" layer="95" xref="yes"/>
+</segment>
+<segment>
+<pinref part="C7" gate="G$1" pin="2"/>
+<wire x1="114.3" y1="142.24" x2="114.3" y2="139.7" width="0.1524" layer="91"/>
+<pinref part="C8" gate="G$1" pin="2"/>
+<wire x1="114.3" y1="139.7" x2="119.38" y2="139.7" width="0.1524" layer="91"/>
+<wire x1="119.38" y1="139.7" x2="124.46" y2="139.7" width="0.1524" layer="91"/>
+<wire x1="124.46" y1="139.7" x2="124.46" y2="142.24" width="0.1524" layer="91"/>
+<junction x="119.38" y="139.7"/>
+<pinref part="GND13" gate="1" pin="GND"/>
+<wire x1="119.38" y1="137.16" x2="119.38" y2="139.7" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="SCK" class="0">
@@ -11231,6 +11256,17 @@ Source: http://www.nxp.com/documents/data_sheet/74ABT125.pdf</description>
 <junction x="86.36" y="167.64"/>
 <junction x="86.36" y="147.32"/>
 <junction x="86.36" y="127"/>
+</segment>
+<segment>
+<pinref part="C7" gate="G$1" pin="1"/>
+<wire x1="114.3" y1="149.86" x2="114.3" y2="154.94" width="0.1524" layer="91"/>
+<pinref part="C8" gate="G$1" pin="1"/>
+<wire x1="114.3" y1="154.94" x2="119.38" y2="154.94" width="0.1524" layer="91"/>
+<wire x1="119.38" y1="154.94" x2="124.46" y2="154.94" width="0.1524" layer="91"/>
+<wire x1="124.46" y1="154.94" x2="124.46" y2="149.86" width="0.1524" layer="91"/>
+<junction x="119.38" y="154.94"/>
+<wire x1="119.38" y1="154.94" x2="119.38" y2="157.48" width="0.1524" layer="91"/>
+<label x="119.38" y="157.48" size="1.27" layer="95" rot="R90" xref="yes"/>
 </segment>
 </net>
 <net name="WMISO" class="0">
