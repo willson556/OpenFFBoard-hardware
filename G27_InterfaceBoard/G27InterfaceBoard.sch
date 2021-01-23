@@ -1510,6 +1510,24 @@ diameter 3 mm, horizontal, grid 12.7 mm</description>
 <pin name="A" x="-2.54" y="0" visible="off" length="point" direction="pas"/>
 <pin name="C" x="2.54" y="0" visible="off" length="point" direction="pas" rot="R180"/>
 </symbol>
+<symbol name="SCHOTTKY" urn="urn:adsk.eagle:symbol:43101/2" library_version="8">
+<wire x1="-1.27" y1="-1.27" x2="1.27" y2="0" width="0.254" layer="94"/>
+<wire x1="1.27" y1="0" x2="-1.27" y2="1.27" width="0.254" layer="94"/>
+<wire x1="1.905" y1="1.27" x2="1.27" y2="1.27" width="0.254" layer="94"/>
+<wire x1="1.27" y1="1.27" x2="1.27" y2="0" width="0.254" layer="94"/>
+<wire x1="-1.27" y1="1.27" x2="-1.27" y2="0" width="0.254" layer="94"/>
+<wire x1="-1.27" y1="0" x2="-1.27" y2="-1.27" width="0.254" layer="94"/>
+<wire x1="1.27" y1="0" x2="1.27" y2="-1.27" width="0.254" layer="94"/>
+<wire x1="1.905" y1="1.27" x2="1.905" y2="1.016" width="0.254" layer="94"/>
+<wire x1="1.27" y1="-1.27" x2="0.635" y2="-1.27" width="0.254" layer="94"/>
+<wire x1="0.635" y1="-1.016" x2="0.635" y2="-1.27" width="0.254" layer="94"/>
+<wire x1="-1.27" y1="0" x2="-2.54" y2="0" width="0.254" layer="94"/>
+<wire x1="1.27" y1="0" x2="2.54" y2="0" width="0.254" layer="94"/>
+<text x="-2.286" y="1.905" size="1.778" layer="95">&gt;NAME</text>
+<text x="-2.286" y="-3.429" size="1.778" layer="96">&gt;VALUE</text>
+<pin name="A" x="-2.54" y="0" visible="off" length="point" direction="pas"/>
+<pin name="C" x="2.54" y="0" visible="off" length="point" direction="pas" rot="R180"/>
+</symbol>
 </symbols>
 <devicesets>
 <deviceset name="ZENER-DIODE" urn="urn:adsk.eagle:component:43648/7" prefix="D" uservalue="yes" library_version="8">
@@ -1823,6 +1841,29 @@ diameter 3 mm, horizontal, grid 12.7 mm</description>
 <technologies>
 <technology name="">
 <attribute name="POPULARITY" value="3" constant="no"/>
+</technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="BAT54" urn="urn:adsk.eagle:component:43607/4" prefix="D" library_version="8">
+<description>&lt;b&gt;Schottky Diodes&lt;/b&gt;&lt;p&gt;
+Source: Fairchild .. BAT54.pdf</description>
+<gates>
+<gate name="G$1" symbol="SCHOTTKY" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="SOT23">
+<connects>
+<connect gate="G$1" pin="A" pad="1"/>
+<connect gate="G$1" pin="C" pad="3"/>
+</connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:43389/2"/>
+</package3dinstances>
+<technologies>
+<technology name="">
+<attribute name="POPULARITY" value="2" constant="no"/>
 </technology>
 </technologies>
 </device>
@@ -10425,8 +10466,8 @@ Source: http://www.nxp.com/documents/data_sheet/74ABT125.pdf</description>
 <part name="J2" library="SparkFun-Connectors" library_urn="urn:adsk.eagle:library:513" deviceset="DB9" device="MALE" package3d_urn="urn:adsk.eagle:package:38021/1" value="Shifter"/>
 <part name="JP3" library="stm_board_f407" deviceset="PINHEAD_PINHD-2X5" device=""/>
 <part name="U1" library="SparkFun-IC-Amplifiers" library_urn="urn:adsk.eagle:library:520" deviceset="LMV324" device="" package3d_urn="urn:adsk.eagle:package:38668/1" value="LMV324"/>
-<part name="R2" library="resistor" library_urn="urn:adsk.eagle:library:348" deviceset="R-EU_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="1.5k"/>
-<part name="R3" library="resistor" library_urn="urn:adsk.eagle:library:348" deviceset="R-EU_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="1.5k"/>
+<part name="R2" library="resistor" library_urn="urn:adsk.eagle:library:348" deviceset="R-EU_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="1.2k"/>
+<part name="R3" library="resistor" library_urn="urn:adsk.eagle:library:348" deviceset="R-EU_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="1.2k"/>
 <part name="R4" library="resistor" library_urn="urn:adsk.eagle:library:348" deviceset="R-EU_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="7.5k"/>
 <part name="R5" library="resistor" library_urn="urn:adsk.eagle:library:348" deviceset="R-EU_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="7.5k"/>
 <part name="R6" library="resistor" library_urn="urn:adsk.eagle:library:348" deviceset="R-EU_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="7.5k"/>
@@ -10438,10 +10479,10 @@ Source: http://www.nxp.com/documents/data_sheet/74ABT125.pdf</description>
 <attribute name="SPICEPREFIX" value="D"/>
 </part>
 <part name="IC1" library="linear" library_urn="urn:adsk.eagle:library:262" deviceset="LMV321?*" device="M5" package3d_urn="urn:adsk.eagle:package:16456/2"/>
-<part name="R7" library="resistor" library_urn="urn:adsk.eagle:library:348" deviceset="R-EU_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="1.5k"/>
+<part name="R7" library="resistor" library_urn="urn:adsk.eagle:library:348" deviceset="R-EU_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="1.2k"/>
 <part name="R8" library="resistor" library_urn="urn:adsk.eagle:library:348" deviceset="R-EU_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="7.5k"/>
 <part name="GND4" library="stm_board_f407" deviceset="SUPPLY1_GND" device=""/>
-<part name="R9" library="resistor" library_urn="urn:adsk.eagle:library:348" deviceset="R-EU_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="1.5k"/>
+<part name="R9" library="resistor" library_urn="urn:adsk.eagle:library:348" deviceset="R-EU_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="1.2k"/>
 <part name="R10" library="resistor" library_urn="urn:adsk.eagle:library:348" deviceset="R-EU_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="7.5k"/>
 <part name="GND7" library="stm_board_f407" deviceset="SUPPLY1_GND" device=""/>
 <part name="FRAME1" library="frames" library_urn="urn:adsk.eagle:library:229" deviceset="A4L-LOC" device=""/>
@@ -10468,7 +10509,7 @@ Source: http://www.nxp.com/documents/data_sheet/74ABT125.pdf</description>
 <part name="GND11" library="stm_board_f407" deviceset="SUPPLY1_GND" device=""/>
 <part name="R14" library="resistor" library_urn="urn:adsk.eagle:library:348" deviceset="R-EU_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="100"/>
 <part name="GND12" library="stm_board_f407" deviceset="SUPPLY1_GND" device=""/>
-<part name="R1" library="resistor" library_urn="urn:adsk.eagle:library:348" deviceset="R-EU_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="1.5k"/>
+<part name="R1" library="resistor" library_urn="urn:adsk.eagle:library:348" deviceset="R-EU_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="1.2k"/>
 <part name="SPI2" library="pinhead" library_urn="urn:adsk.eagle:library:325" deviceset="PINHD-1X9" device="" package3d_urn="urn:adsk.eagle:package:22483/2"/>
 <part name="R13" library="resistor" library_urn="urn:adsk.eagle:library:348" deviceset="R-EU_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="51"/>
 <part name="R15" library="resistor" library_urn="urn:adsk.eagle:library:348" deviceset="R-EU_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="51"/>
@@ -10476,6 +10517,13 @@ Source: http://www.nxp.com/documents/data_sheet/74ABT125.pdf</description>
 <part name="C7" library="resistor" library_urn="urn:adsk.eagle:library:348" deviceset="C-EU" device="C0603" package3d_urn="urn:adsk.eagle:package:23616/2" value="0.1uF"/>
 <part name="C8" library="resistor" library_urn="urn:adsk.eagle:library:348" deviceset="C-EU" device="C0603" package3d_urn="urn:adsk.eagle:package:23616/2" value="0.1uF"/>
 <part name="GND13" library="stm_board_f407" deviceset="SUPPLY1_GND" device=""/>
+<part name="D2" library="diode" library_urn="urn:adsk.eagle:library:210" deviceset="BAT54" device="" package3d_urn="urn:adsk.eagle:package:43389/2"/>
+<part name="D3" library="diode" library_urn="urn:adsk.eagle:library:210" deviceset="BAT54" device="" package3d_urn="urn:adsk.eagle:package:43389/2"/>
+<part name="D4" library="diode" library_urn="urn:adsk.eagle:library:210" deviceset="BAT54" device="" package3d_urn="urn:adsk.eagle:package:43389/2"/>
+<part name="D5" library="diode" library_urn="urn:adsk.eagle:library:210" deviceset="BAT54" device="" package3d_urn="urn:adsk.eagle:package:43389/2"/>
+<part name="D6" library="diode" library_urn="urn:adsk.eagle:library:210" deviceset="BAT54" device="" package3d_urn="urn:adsk.eagle:package:43389/2"/>
+<part name="D7" library="diode" library_urn="urn:adsk.eagle:library:210" deviceset="BAT54" device="" package3d_urn="urn:adsk.eagle:package:43389/2"/>
+<part name="R11" library="resistor" library_urn="urn:adsk.eagle:library:348" deviceset="R-EU_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="5k"/>
 </parts>
 <sheets>
 <sheet>
@@ -10718,6 +10766,34 @@ Source: http://www.nxp.com/documents/data_sheet/74ABT125.pdf</description>
 <instance part="GND13" gate="1" x="119.38" y="134.62" smashed="yes">
 <attribute name="VALUE" x="116.84" y="132.08" size="1.778" layer="96"/>
 </instance>
+<instance part="D2" gate="G$1" x="236.22" y="167.64" smashed="yes" rot="R90">
+<attribute name="NAME" x="234.315" y="165.354" size="1.778" layer="95" rot="R90"/>
+<attribute name="VALUE" x="239.649" y="165.354" size="1.778" layer="96" rot="R90"/>
+</instance>
+<instance part="D3" gate="G$1" x="236.22" y="142.24" smashed="yes" rot="R90">
+<attribute name="NAME" x="234.315" y="139.954" size="1.778" layer="95" rot="R90"/>
+<attribute name="VALUE" x="239.649" y="139.954" size="1.778" layer="96" rot="R90"/>
+</instance>
+<instance part="D4" gate="G$1" x="236.22" y="119.38" smashed="yes" rot="R90">
+<attribute name="NAME" x="234.315" y="117.094" size="1.778" layer="95" rot="R90"/>
+<attribute name="VALUE" x="239.649" y="117.094" size="1.778" layer="96" rot="R90"/>
+</instance>
+<instance part="D5" gate="G$1" x="236.22" y="99.06" smashed="yes" rot="R90">
+<attribute name="NAME" x="234.315" y="96.774" size="1.778" layer="95" rot="R90"/>
+<attribute name="VALUE" x="239.649" y="96.774" size="1.778" layer="96" rot="R90"/>
+</instance>
+<instance part="D6" gate="G$1" x="238.76" y="50.8" smashed="yes" rot="R90">
+<attribute name="NAME" x="236.855" y="48.514" size="1.778" layer="95" rot="R90"/>
+<attribute name="VALUE" x="242.189" y="48.514" size="1.778" layer="96" rot="R90"/>
+</instance>
+<instance part="D7" gate="G$1" x="66.04" y="50.8" smashed="yes" rot="R90">
+<attribute name="NAME" x="64.135" y="48.514" size="1.778" layer="95" rot="R90"/>
+<attribute name="VALUE" x="69.469" y="48.514" size="1.778" layer="96" rot="R90"/>
+</instance>
+<instance part="R11" gate="G$1" x="76.2" y="45.72" smashed="yes">
+<attribute name="NAME" x="72.39" y="47.2186" size="1.778" layer="95"/>
+<attribute name="VALUE" x="72.39" y="42.418" size="1.778" layer="96"/>
+</instance>
 </instances>
 <busses>
 </busses>
@@ -10909,9 +10985,9 @@ Source: http://www.nxp.com/documents/data_sheet/74ABT125.pdf</description>
 <label x="175.26" y="154.94" size="1.27" layer="95" xref="yes"/>
 </segment>
 <segment>
-<pinref part="SPI2" gate="A" pin="5"/>
-<wire x1="10.16" y1="45.72" x2="17.78" y2="45.72" width="0.1524" layer="91"/>
-<label x="17.78" y="45.72" size="1.27" layer="95" xref="yes"/>
+<pinref part="R11" gate="G$1" pin="2"/>
+<wire x1="81.28" y1="45.72" x2="86.36" y2="45.72" width="0.1524" layer="91"/>
+<label x="86.36" y="45.72" size="1.27" layer="95" xref="yes"/>
 </segment>
 </net>
 <net name="SHIFT_CS" class="0">
@@ -11014,9 +11090,12 @@ Source: http://www.nxp.com/documents/data_sheet/74ABT125.pdf</description>
 <pinref part="R4" gate="G$1" pin="2"/>
 <wire x1="226.06" y1="165.1" x2="231.14" y2="165.1" width="0.1524" layer="91"/>
 <junction x="231.14" y="165.1"/>
-<wire x1="231.14" y1="165.1" x2="238.76" y2="165.1" width="0.1524" layer="91"/>
+<wire x1="231.14" y1="165.1" x2="236.22" y2="165.1" width="0.1524" layer="91"/>
 <label x="238.76" y="165.1" size="1.27" layer="95" xref="yes"/>
 <pinref part="R1" gate="G$1" pin="2"/>
+<pinref part="D2" gate="G$1" pin="A"/>
+<wire x1="236.22" y1="165.1" x2="238.76" y2="165.1" width="0.1524" layer="91"/>
+<junction x="236.22" y="165.1"/>
 </segment>
 <segment>
 <pinref part="JP3" gate="A" pin="5"/>
@@ -11030,8 +11109,11 @@ Source: http://www.nxp.com/documents/data_sheet/74ABT125.pdf</description>
 <pinref part="R5" gate="G$1" pin="2"/>
 <wire x1="226.06" y1="139.7" x2="231.14" y2="139.7" width="0.1524" layer="91"/>
 <junction x="231.14" y="139.7"/>
-<wire x1="231.14" y1="139.7" x2="238.76" y2="139.7" width="0.1524" layer="91"/>
+<wire x1="231.14" y1="139.7" x2="236.22" y2="139.7" width="0.1524" layer="91"/>
 <label x="238.76" y="139.7" size="1.27" layer="95" xref="yes"/>
+<pinref part="D3" gate="G$1" pin="A"/>
+<wire x1="236.22" y1="139.7" x2="238.76" y2="139.7" width="0.1524" layer="91"/>
+<junction x="236.22" y="139.7"/>
 </segment>
 <segment>
 <pinref part="JP3" gate="A" pin="7"/>
@@ -11045,8 +11127,11 @@ Source: http://www.nxp.com/documents/data_sheet/74ABT125.pdf</description>
 <pinref part="R6" gate="G$1" pin="2"/>
 <wire x1="226.06" y1="116.84" x2="231.14" y2="116.84" width="0.1524" layer="91"/>
 <junction x="231.14" y="116.84"/>
-<wire x1="231.14" y1="116.84" x2="238.76" y2="116.84" width="0.1524" layer="91"/>
+<wire x1="231.14" y1="116.84" x2="236.22" y2="116.84" width="0.1524" layer="91"/>
 <label x="238.76" y="116.84" size="1.27" layer="95" xref="yes"/>
+<pinref part="D4" gate="G$1" pin="A"/>
+<wire x1="236.22" y1="116.84" x2="238.76" y2="116.84" width="0.1524" layer="91"/>
+<junction x="236.22" y="116.84"/>
 </segment>
 <segment>
 <pinref part="JP3" gate="A" pin="6"/>
@@ -11079,6 +11164,36 @@ Source: http://www.nxp.com/documents/data_sheet/74ABT125.pdf</description>
 <pinref part="SPI2" gate="A" pin="2"/>
 <wire x1="10.16" y1="38.1" x2="17.78" y2="38.1" width="0.1524" layer="91"/>
 <label x="17.78" y="38.1" size="1.27" layer="95" xref="yes"/>
+</segment>
+<segment>
+<pinref part="D6" gate="G$1" pin="C"/>
+<wire x1="238.76" y1="53.34" x2="238.76" y2="55.88" width="0.1524" layer="91"/>
+<label x="238.76" y="55.88" size="1.27" layer="95" rot="R90" xref="yes"/>
+</segment>
+<segment>
+<pinref part="D5" gate="G$1" pin="C"/>
+<wire x1="236.22" y1="101.6" x2="236.22" y2="104.14" width="0.1524" layer="91"/>
+<label x="236.22" y="104.14" size="1.27" layer="95" rot="R90" xref="yes"/>
+</segment>
+<segment>
+<pinref part="D4" gate="G$1" pin="C"/>
+<wire x1="236.22" y1="121.92" x2="236.22" y2="124.46" width="0.1524" layer="91"/>
+<label x="236.22" y="124.46" size="1.27" layer="95" rot="R90" xref="yes"/>
+</segment>
+<segment>
+<pinref part="D3" gate="G$1" pin="C"/>
+<wire x1="236.22" y1="144.78" x2="236.22" y2="147.32" width="0.1524" layer="91"/>
+<label x="236.22" y="147.32" size="1.27" layer="95" rot="R90" xref="yes"/>
+</segment>
+<segment>
+<pinref part="D2" gate="G$1" pin="C"/>
+<wire x1="236.22" y1="170.18" x2="236.22" y2="172.72" width="0.1524" layer="91"/>
+<label x="236.22" y="172.72" size="1.27" layer="95" xref="yes"/>
+</segment>
+<segment>
+<pinref part="D7" gate="G$1" pin="C"/>
+<wire x1="66.04" y1="53.34" x2="66.04" y2="58.42" width="0.1524" layer="91"/>
+<label x="66.04" y="58.42" size="1.27" layer="95" rot="R90" xref="yes"/>
 </segment>
 </net>
 <net name="WLED_LATCH" class="0">
@@ -11130,8 +11245,11 @@ Source: http://www.nxp.com/documents/data_sheet/74ABT125.pdf</description>
 <pinref part="R8" gate="G$1" pin="2"/>
 <wire x1="226.06" y1="96.52" x2="231.14" y2="96.52" width="0.1524" layer="91"/>
 <junction x="231.14" y="96.52"/>
-<wire x1="231.14" y1="96.52" x2="238.76" y2="96.52" width="0.1524" layer="91"/>
+<wire x1="231.14" y1="96.52" x2="236.22" y2="96.52" width="0.1524" layer="91"/>
 <label x="238.76" y="96.52" size="1.27" layer="95" xref="yes"/>
+<pinref part="D5" gate="G$1" pin="A"/>
+<wire x1="236.22" y1="96.52" x2="238.76" y2="96.52" width="0.1524" layer="91"/>
+<junction x="236.22" y="96.52"/>
 </segment>
 <segment>
 <pinref part="JP3" gate="A" pin="8"/>
@@ -11158,8 +11276,11 @@ Source: http://www.nxp.com/documents/data_sheet/74ABT125.pdf</description>
 <junction x="236.22" y="48.26"/>
 <pinref part="R9" gate="G$1" pin="2"/>
 <wire x1="231.14" y1="48.26" x2="236.22" y2="48.26" width="0.1524" layer="91"/>
-<wire x1="236.22" y1="48.26" x2="241.3" y2="48.26" width="0.1524" layer="91"/>
+<wire x1="236.22" y1="48.26" x2="238.76" y2="48.26" width="0.1524" layer="91"/>
 <label x="241.3" y="48.26" size="1.27" layer="95" xref="yes"/>
+<pinref part="D6" gate="G$1" pin="A"/>
+<wire x1="238.76" y1="48.26" x2="241.3" y2="48.26" width="0.1524" layer="91"/>
+<junction x="238.76" y="48.26"/>
 </segment>
 <segment>
 <pinref part="JP3" gate="A" pin="9"/>
@@ -11372,6 +11493,17 @@ Source: http://www.nxp.com/documents/data_sheet/74ABT125.pdf</description>
 <pinref part="SPI2" gate="A" pin="8"/>
 <wire x1="10.16" y1="53.34" x2="17.78" y2="53.34" width="0.1524" layer="91"/>
 <label x="17.78" y="53.34" size="1.27" layer="95" xref="yes"/>
+</segment>
+</net>
+<net name="N$4" class="0">
+<segment>
+<pinref part="SPI2" gate="A" pin="5"/>
+<pinref part="R11" gate="G$1" pin="1"/>
+<wire x1="10.16" y1="45.72" x2="66.04" y2="45.72" width="0.1524" layer="91"/>
+<pinref part="D7" gate="G$1" pin="A"/>
+<wire x1="66.04" y1="45.72" x2="71.12" y2="45.72" width="0.1524" layer="91"/>
+<wire x1="66.04" y1="48.26" x2="66.04" y2="45.72" width="0.1524" layer="91"/>
+<junction x="66.04" y="45.72"/>
 </segment>
 </net>
 </nets>
